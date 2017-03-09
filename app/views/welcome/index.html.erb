@@ -1,10 +1,26 @@
-<div class='container'>
+
+<br>
+<div class="jumbotron">
   <h1>COPYN'IT</h1>
-  <p id="index-title">Hi there! morning selfie, i'm a little hung over.</p>
+  <p>Hi there! morning selfie, i'm a little hung over.</p>
   <%= image_tag("jabba.jpeg") %>
+  <p>
+      <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+  </p>
+</div>
 
-  <div class="posts">Hello Jabba!</div>
-  <div class="posts">Solo!</div>
-
-  <section>This is the content.</section>
+<div class="row">
+  <div class="col-md-4">
+    <h2>Life lesson</h2>
+    <p>Pay paper boy two dollars plus tip.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Cooking tip</h2>
+    <p>Cook pea soup in a thimble. Get deep voiced cricket to deliver order.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Confirm location</h2>
+    <p>The stars at night are big and bright...</p>
+  </div>
 </div>
