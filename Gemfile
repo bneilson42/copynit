@@ -6,6 +6,7 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
 gem 'bootstrap-sass'
 gem 'faker'
+gem 'devise'
 # Postgres production, sqlite for development
 group :production do
   gem 'pg'
