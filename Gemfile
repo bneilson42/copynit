@@ -8,6 +8,7 @@ gem 'bootstrap-sass'
 gem 'faker'
 gem 'devise'
 gem 'figaro'
+gem 'pundit'
 # Postgres production, sqlite for development
 group :production do
   gem 'pg'
