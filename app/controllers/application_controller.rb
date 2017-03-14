@@ -5,11 +5,11 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError do |exception|
     redirect_to root_url, alert: exception.message
-  end 
+  end
 
   protected
 
   def configure_permitted_parameters
-    devise_perameter_sanitizer.for(:sign_up) << :name
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 end
