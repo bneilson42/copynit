@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :posts, except: [:index]
   end
 
+  resources :posts, only: [:index]
+
   resources :advertisements
 
   get 'about' => 'welcome#about'
