@@ -9,6 +9,7 @@ gem 'faker'
 gem 'devise'
 gem 'figaro'
 gem 'pundit'
+gem 'redcarpet'
 # Postgres production, sqlite for development
 group :production do
   gem 'pg'
