@@ -13,6 +13,7 @@ gem 'redcarpet'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+gem 'will_paginate', '~> 3.1.0'
 # Postgres production, sqlite for development
 group :production do
   gem 'pg'
