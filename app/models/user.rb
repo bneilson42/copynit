@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :posts
+  mount_uploader :avatar, AvatarUploader
 
   def admin?
     role == 'admin'
@@ -12,5 +13,5 @@ class User < ApplicationRecord
 
   def moderator?
     role == 'moderator'
-  end 
+  end
 end
