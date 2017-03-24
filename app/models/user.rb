@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :posts
+  has_many :comments
+  
   mount_uploader :avatar, AvatarUploader
 
   def admin?

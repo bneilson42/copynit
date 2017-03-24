@@ -37,6 +37,7 @@ posts = Post.all
   Comment.create!(
     # user: users.sample, #have not yet associated users with comments
     post: posts.sample,
+    user: users.sample,
     body: Faker::Lorem.paragraph
   )
 end
