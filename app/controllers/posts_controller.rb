@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @topic = Topic.find(params[:topic_id])
     @comments = @post.comments
-    @comment = @post.comments.build 
+    @comment = @post.comments.build
   end
 
   def new
@@ -49,6 +49,20 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+     @topic = Topic.find(params[:topic_id])
+     @post = Post.find(params[:id])
+     authorize @post
+
+     if @post.destroy
+       flash[:notice] = "\"#{@post.title}\" was deleted successfully."
+       redirect_to @topic
+     else
+       flash[:error] = "There was an error deleting the post."
+       render :show
+     end
+   end
 
   private
 
