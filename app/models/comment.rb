@@ -8,6 +8,8 @@ class Comment < ApplicationRecord
 
   after_create :send_favorite_emails
 
+  default_scope { order('updated_at DESC') }
+
   private
 
   def send_favorite_emails
@@ -17,4 +19,4 @@ class Comment < ApplicationRecord
       end
     end
   end
-end 
+end
